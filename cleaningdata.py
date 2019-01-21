@@ -197,7 +197,7 @@ ebola_melt = pd.melt(ebola, id_vars=['Date', 'Day'], var_name='type_country', va
 print(ebola_melt.head(),end='\n')
 print('\n')
 print(ebola.head())
-#%%
+
 
 #Create a column called 'str_split' by splitting the 'type_country' column of ebola_melt on '_'. 
 #Note that you will first have to access the str attribute of type_country before you can use .split().
@@ -206,7 +206,7 @@ ebola_melt['str_split'] = ebola_melt.type_country.str.split('_')
 print(ebola_melt.head(),end='\n')
 
 
-#%%
+
 
 #Create a column called 'type' by using the .get() method to retrieve index 0 of the 'str_split' column of ebola_melt.
 
